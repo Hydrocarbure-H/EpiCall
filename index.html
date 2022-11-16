@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type='text/javascript' src='https://cdn.scaledrone.com/scaledrone.min.js'></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <style>
+    body {
+      display: flex;
+      height: 100vh;
+      margin: 0;
+      align-items: center;
+      justify-content: center;
+      padding: 0 50px;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    video {
+      max-width: calc(50% - 50px);
+      margin: 0 50px;
+      box-sizing: border-box;
+      border-radius: 2px;
+      padding: 0;
+      border-radius: 5px;
+      box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+        }
+    .copy {
+      position: fixed;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 16px;
+      text-align: center;
+      color: rgba(0, 0, 0, 0.5);
+    }
+
+    #second
+    {
+      font-size: 10px;
+    }
+
+@media screen and (max-width : 885px) 
+{
+  body {
+    padding : 0;
+  }
+    #localVideo
+    {
+      display: none;
+    }
+      #remoteVideo
+      {
+      max-width: calc(100% - 10px);
+      max-height : 80vh;
+      margin: 0 0px;
+      box-sizing: border-box;
+      border-radius: 2px;
+      padding: 0;
+      border-radius: 5px;
+      }
+}
+  </style>
+</head>
+<body>
+  <div class="copy"><h1>Epeer-To-Peer</h1><p id="first">Envoyez l'URL à l'autre participant</p><p id="second">Veillez à utiliser un navigateur sous Chromium (Brave, Chrome, etc.)</p></div>
+  <video id="localVideo" autoplay muted></video>
+  <video id="remoteVideo" autoplay></video>
+  <script src="script.js"></script>
+</body>
+</html>
